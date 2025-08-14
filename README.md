@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pousada Três Palmeiras - Landing Page
 
-## Getting Started
+Landing page moderna e otimizada para a Pousada Três Palmeiras, desenvolvida com Next.js 15 e focada em conversão e SEO.
 
-First, run the development server:
+## 🚀 Tecnologias
+
+- **Next.js 15** (App Router)
+- **TypeScript** (strict mode)
+- **Tailwind CSS** + **shadcn/ui**
+- **React Hook Form** + **Zod**
+- **Bun** (runtime e package manager)
+- **ESLint** + **Prettier**
+
+## 📋 Funcionalidades
+
+- ✅ **Performance otimizada** (Core Web Vitals)
+- ✅ **SEO técnico** (sitemap, robots.txt, meta tags)
+- ✅ **Acessibilidade** (WCAG 2.1 AA)
+- ✅ **Google Analytics 4** + **Tag Manager**
+- ✅ **Formulário de contato** com validação
+- ✅ **Design responsivo** e moderno
+- ✅ **Rastreamento de eventos** (WhatsApp, telefone, etc.)
+
+## 🛠️ Desenvolvimento
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Instalar dependências
+bun install
+
+# Servidor de desenvolvimento
+bun run dev
+
+# Build de produção
+bun run build
+
+# Verificações de qualidade
+bun run lint
+bunx tsc --noEmit
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Produção:** https://tres-palmeiras-53a1brwlz-letteriellos-projects.vercel.app
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O projeto está configurado para deploy automático na Vercel.
 
-## Learn More
+## 📊 Analytics
 
-To learn more about Next.js, take a look at the following resources:
+Para ativar o Google Analytics e Tag Manager em produção:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Substitua os IDs placeholder no `layout.tsx`:
+   - `GTM-XXXXXXX` → seu ID do Google Tag Manager
+   - `G-XXXXXXXXXX` → seu ID do Google Analytics 4
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Descomente os scripts de analytics
 
-## Deploy on Vercel
+## 🎯 Próximos Passos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Configurar domínio personalizado
+- [ ] Ativar IDs reais do GA4/GTM
+- [ ] Implementar Schema Markup
+- [ ] Configurar Google Search Console
+- [ ] Testes A/B para otimização de conversão
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Licença
+
+Projeto desenvolvido para a Pousada Três Palmeiras.
