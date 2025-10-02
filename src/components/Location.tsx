@@ -122,9 +122,9 @@ const Location = () => {
             <div className="flex items-center gap-3 text-left">
               <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
               <div>
-                <p className="font-semibold text-lg mb-1">Balneário Piçarras, SC</p>
+                <p className="font-semibold text-lg mb-1">R. Lapa, 410 - Itacolomi</p>
                 <p className="text-muted-foreground">
-                  A 200 metros da praia • Próximo ao Parque Linear Orla
+                  Balneário Piçarras - SC, 88380-000
                 </p>
               </div>
             </div>

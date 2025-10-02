@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Phone, MessageCircle, Mail, Instagram } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Instagram } from "lucide-react";
 
 const Contact = () => {
-  const whatsappNumber = "5547999999999";
+  const whatsappNumber = "5547992447703";
   const reservationMessage = encodeURIComponent(
     "Olá! Gostaria de fazer uma reserva para casal. Vocês têm disponibilidade para [datas]?"
   );
@@ -67,7 +67,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Telefone / WhatsApp</h4>
-                <p className="text-muted-foreground">(47) 99999-9999</p>
+                <p className="text-muted-foreground">(47) 9924-4703</p>
                 <p className="text-sm text-muted-foreground mt-1">
                   Atendimento personalizado
                 </p>
@@ -76,13 +76,13 @@ const Contact = () => {
 
             <div className="flex items-start gap-4">
               <div className="p-3 rounded-lg bg-primary/10 flex-shrink-0">
-                <Mail className="w-6 h-6 text-primary" />
+                <MapPin className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h4 className="font-semibold mb-2">E-mail</h4>
-                <p className="text-muted-foreground">contato@trespalmeiras.com.br</p>
+                <h4 className="font-semibold mb-2">Endereço</h4>
+                <p className="text-muted-foreground">R. Lapa, 410 - Itacolomi</p>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Respondemos em até 24h
+                  Balneário Piçarras - SC, 88380-000
                 </p>
               </div>
             </div>

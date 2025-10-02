@@ -1,4 +1,4 @@
-import { Heart, MapPin, Phone, Mail } from "lucide-react";
+import { Heart, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -69,17 +69,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                 <span className="text-primary-foreground/80">
-                  Balneário Piçarras, SC<br />
-                  A 200m da praia
+                  R. Lapa, 410 - Itacolomi<br />
+                  Balneário Piçarras - SC, 88380-000
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
-                <span className="text-primary-foreground/80">(47) 99999-9999</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
-                <span className="text-primary-foreground/80">contato@trespalmeiras.com.br</span>
+                <span className="text-primary-foreground/80">(47) 9924-4703</span>
               </li>
             </ul>
           </div>

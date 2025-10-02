@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const FloatingWhatsApp = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const whatsappNumber = "5547999999999";
+  const whatsappNumber = "5547992447703";
   const message = encodeURIComponent(
     "Olá! Vim do site e gostaria de saber mais sobre a Pousada Home das Três Palmeiras."
   );
