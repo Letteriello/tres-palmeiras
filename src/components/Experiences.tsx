@@ -4,12 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Sparkles, UtensilsCrossed, Waves, Phone } from "lucide-react";
 import romanticDinner from "@/assets/romantic-dinner.jpg";
 import spaCouples from "@/assets/spa-couples.jpg";
+import bridalDay from "@/assets/room/bathtub-1.jpg";
 
 const Experiences = () => {
   const whatsappMessage = encodeURIComponent(
-    "Olá! Gostaria de saber mais sobre as experiências românticas disponíveis."
+    "Olá! Gostaria de saber mais sobre as experiências disponíveis na Home das Três Palmeiras."
   );
-  const whatsappNumber = "5547999999999";
+  const whatsappNumber = "554799244703";
 
   const experiences = [
     {
@@ -30,7 +31,7 @@ const Experiences = () => {
       icon: Sparkles,
       title: "Dia da Noiva - Serviços de Beleza",
       description: "Pacote especial de beleza e bem-estar para noivas, incluindo cabelo, maquiagem e cuidados relaxantes antes do grande dia.",
-      image: null,
+      image: bridalDay,
       badge: "Exclusivo",
     },
   ];

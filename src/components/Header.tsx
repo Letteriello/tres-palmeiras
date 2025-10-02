@@ -40,10 +40,6 @@ const Header = () => {
               <h1 className="text-xl md:text-2xl font-bold text-primary leading-tight">
                 Home das Três Palmeiras
               </h1>
-              <p className="text-xs text-muted-foreground flex items-center gap-1">
-                <Heart className="w-3 h-3 text-secondary fill-secondary" />
-                Refúgio Romântico
-              </p>
             </div>
           </button>
 

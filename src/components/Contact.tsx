@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Phone, MessageCircle, MapPin, Instagram } from "lucide-react";
 
 const Contact = () => {
-  const whatsappNumber = "5547992447703";
+  const whatsappNumber = "554799244703";
   const reservationMessage = encodeURIComponent(
     "Olá! Gostaria de fazer uma reserva para casal. Vocês têm disponibilidade para [datas]?"
   );
@@ -94,10 +94,10 @@ const Contact = () => {
             <Button 
               variant="outline" 
               size="lg"
-              onClick={() => window.open('https://instagram.com/trespalmeiras', '_blank')}
+              onClick={() => window.open('https://www.instagram.com/home_das_tres_palmeiras/', '_blank')}
             >
               <Instagram className="w-5 h-5" />
-              @homedastrespalmeiras
+              @home_das_tres_palmeiras
             </Button>
           </div>
 

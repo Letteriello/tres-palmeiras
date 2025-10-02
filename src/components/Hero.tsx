@@ -1,12 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Phone } from "lucide-react";
 import heroBeach from "@/assets/hero-beach.jpg";
+import { useState } from "react";
 
 const Hero = () => {
   const whatsappMessage = encodeURIComponent(
-    "Olá! Gostaria de fazer uma reserva para casal. Vocês têm disponibilidade?"
+    "Olá! Gostaria de fazer uma reserva na Home das Três Palmeiras."
   );
-  const whatsappNumber = "5547999999999"; // Substituir pelo número real
+  // Sistema de reserva: estados para datas e adultos
+  const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
+  const [adults, setAdults] = useState(2);
+
+  // Formata data YYYY-MM-DD para DD/MM/YYYY
+  const formatDate = (isoDate: string) => {
+    if (!isoDate) return "";
+    const [y, m, d] = isoDate.split("-");
+    return `${d}/${m}/${y}`;
+  };
+
+  const whatsappNumber = "554799244703";
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -23,12 +36,12 @@ const Hero = () => {
         <div className="mb-6 inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground/10 backdrop-blur-sm rounded-full border-2 border-secondary">
           <Heart className="w-5 h-5 text-secondary fill-secondary" />
           <span className="text-primary-foreground font-medium text-sm md:text-base">
-            Ambiente Exclusivo para Casais • Adults Only
+            Ambiente Exclusivo para Casais
           </span>
         </div>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-          Seu Refúgio Romântico
+          Sua Pousada
           <br />
           <span className="text-secondary">à Beira-Mar</span>
         </h1>
@@ -40,10 +53,76 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* Campos de Check-in / Check-out / Adultos */}
+          <div className="w-full max-w-3xl grid grid-cols-1 md:grid-cols-3 gap-3 mb-2">
+            <div className="flex flex-col">
+              <label className="text-primary-foreground font-medium mb-1 text-sm">Check-in</label>
+              <input
+                type="date"
+                value={checkIn}
+                onChange={(e) => setCheckIn(e.target.value)}
+                className="px-4 py-3 rounded-md border-2 border-white/30 bg-white/20 backdrop-blur-sm text-white placeholder-white/70 focus:border-secondary focus:outline-none"
+                aria-label="Data de check-in"
+                lang="pt-BR"
+              />
+            </div>
+            <div className="flex flex-col">
+              <label className="text-primary-foreground font-medium mb-1 text-sm">Check-out</label>
+              <input
+                type="date"
+                value={checkOut}
+                onChange={(e) => setCheckOut(e.target.value)}
+                className="px-4 py-3 rounded-md border-2 border-white/30 bg-white/20 backdrop-blur-sm text-white placeholder-white/70 focus:border-secondary focus:outline-none"
+                aria-label="Data de check-out"
+                lang="pt-BR"
+              />
+            </div>
+            <div className="flex flex-col">
+              <label className="text-primary-foreground font-medium mb-1 text-sm">Adultos</label>
+              <select
+                value={adults}
+                onChange={(e) => setAdults(Number(e.target.value))}
+                className="px-4 py-3 rounded-md border-2 border-white/30 bg-white/20 backdrop-blur-sm text-white focus:border-secondary focus:outline-none"
+                aria-label="Quantidade de adultos"
+              >
+                <option value={1} className="bg-primary text-white">1 adulto</option>
+                <option value={2} className="bg-primary text-white">2 adultos</option>
+                <option value={3} className="bg-primary text-white">3 adultos</option>
+                <option value={4} className="bg-primary text-white">4 adultos</option>
+              </select>
+            </div>
+          </div>
+
           <Button 
             variant="romantic" 
             size="xl"
-            onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank')}
+            onClick={() => {
+              // Validação básica das entradas
+              if (!checkIn || !checkOut) {
+                alert("Erro: informe as datas de check-in e check-out.");
+                return;
+              }
+              const inDate = new Date(checkIn);
+              const outDate = new Date(checkOut);
+              if (isNaN(inDate.getTime()) || isNaN(outDate.getTime())) {
+                alert("Erro: datas inválidas. Verifique os campos.");
+                return;
+              }
+              if (outDate <= inDate) {
+                alert("Erro: a data de check-out deve ser após a data de check-in.");
+                return;
+              }
+              if (adults < 1) {
+                alert("Erro: informe pelo menos 1 adulto.");
+                return;
+              }
+
+              // Construção da mensagem para WhatsApp com dados reais
+              const message = encodeURIComponent(
+                `Olá! Gostaria de verificar disponibilidade. Adultos: ${adults}. Check-in: ${formatDate(checkIn)}. Check-out: ${formatDate(checkOut)}.`
+              );
+              window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
+            }}
             className="min-w-[280px]"
           >
             <Phone className="w-5 h-5" />

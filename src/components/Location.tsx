@@ -32,16 +32,13 @@ const Location = () => {
   ];
 
   const openGoogleMaps = () => {
-    // Coordenadas de Balneário Piçarras - substituir pelas coordenadas exatas da pousada
-    const latitude = "-26.7683";
-    const longitude = "-48.6717";
-    window.open(`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}&query_place_id=ChIJBalnearioPicarras`, '_blank');
+    const address = "R. Lapa, 410 - Itacolomi, Balneário Piçarras - SC, 88380-000";
+    window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`, '_blank');
   };
 
   const openWaze = () => {
-    const latitude = "-26.7683";
-    const longitude = "-48.6717";
-    window.open(`https://waze.com/ul?ll=${latitude},${longitude}&navigate=yes`, '_blank');
+    const address = "R. Lapa, 410 - Itacolomi, Balneário Piçarras - SC, 88380-000";
+    window.open(`https://waze.com/ul?q=${encodeURIComponent(address)}&navigate=yes`, '_blank');
   };
 
   return (
@@ -62,14 +59,14 @@ const Location = () => {
         {/* Map */}
         <div className="mb-12 rounded-2xl overflow-hidden shadow-elegant">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55983.69845935!2d-48.69!3d-26.77!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8b4f8f8f8f8f8%3A0x8f8f8f8f8f8f8f8!2sBalneário%20Piçarras%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.123456789!2d-48.6717!3d-26.7683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDQ2JzA2LjAiUyA0OMKwNDAnMTguMCJX!5e0!3m2!1spt-BR!2sbr!4v1640995200000!5m2!1spt-BR!2sbr&q=R.%20Lapa,%20410%20-%20Itacolomi,%20Balneário%20Piçarras%20-%20SC,%2088380-000"
             width="100%"
             height="450"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Localização Home das Três Palmeiras em Balneário Piçarras"
+            title="Localização Home das Três Palmeiras - R. Lapa, 410 - Itacolomi, Balneário Piçarras"
           ></iframe>
         </div>
 

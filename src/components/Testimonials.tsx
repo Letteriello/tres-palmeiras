@@ -15,7 +15,7 @@ const Testimonials = () => {
       name: "Juliana & Roberto",
       location: "Curitiba, PR",
       rating: 5,
-      text: "A melhor escolha para nosso aniversário de casamento. O ambiente adults only faz toda diferença - pura tranquilidade. A proximidade da praia e o atendimento personalizado nos conquistaram completamente.",
+      text: "A melhor escolha para nosso aniversário de casamento. O ambiente para Casais faz toda diferença - pura tranquilidade. A proximidade da praia e o atendimento personalizado nos conquistaram completamente.",
       initials: "JR",
     },
     {

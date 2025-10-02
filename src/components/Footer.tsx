@@ -14,12 +14,12 @@ const Footer = () => {
               <h3 className="text-xl font-bold">Home das Três Palmeiras</h3>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
-              Seu refúgio romântico à beira-mar em Balneário Piçarras. 
+              Sua Pousada à beira-mar em Balneário Piçarras. 
               Ambiente exclusivo para casais adultos.
             </p>
             <div className="flex items-center gap-2 mt-4 text-secondary">
               <Heart className="w-5 h-5 fill-secondary" />
-              <span className="font-semibold">Adults Only • Pet Free</span>
+              <span className="font-semibold">Ideal para Casais</span>
             </div>
           </div>
 
@@ -87,7 +87,7 @@ const Footer = () => {
             © {currentYear} Home das Três Palmeiras. Todos os direitos reservados.
           </p>
           <p className="text-primary-foreground/60 text-xs mt-2">
-            Pousada boutique romântica em Balneário Piçarras • Adults Only • Pet Free
+            Pousada boutique romântica em Balneário Piçarras • Ideal para Casais
           </p>
         </div>
       </div>
