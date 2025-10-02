@@ -17,6 +17,7 @@ const Header = () => {
     { label: "Início", id: "inicio" },
     { label: "Acomodações", id: "acomodacoes" },
     { label: "Experiências", id: "experiencias" },
+    { label: "Galeria", id: "galeria" },
     { label: "Localização", id: "localizacao" },
     { label: "Contato", id: "contato" },
   ];
