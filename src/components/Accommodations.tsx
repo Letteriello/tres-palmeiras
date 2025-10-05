@@ -18,7 +18,7 @@ const Accommodations = () => {
       id: "quarto-vista-das-tres-palmeiras",
       title: "Quarto Vista das Três Palmeiras",
       subtitle: "Suíte Romântica com Banheira de Hidromassagem",
-      description: "Nossa suíte premium oferece uma experiência completa de conforto e romance. Destaque para a banheira de hidromassagem no próprio quarto, ambiente elegante com decoração sofisticada, ar condicionado, TV a cabo, Wi-Fi de alta velocidade e frigobar. Perfeito para momentos inesquecíveis a dois.",
+      description: "Nossa suíte premium oferece uma experiência completa de conforto e romance. Destaque para a banheira de hidromassagem no próprio quarto, ambiente elegante com decoração sofisticada, ar condicionado, TV a cabo, Wi-Fi de alta velocidade. Perfeito para momentos inesquecíveis a dois.",
       badge: "Suite Premium",
       policy: "Política Exclusiva: Ambiente dedicado apenas a casais adultos, garantindo sua privacidade e tranquilidade absoluta.",
       images: [
@@ -37,7 +37,6 @@ const Accommodations = () => {
         { icon: Snowflake, label: "Ar Condicionado" },
         { icon: Tv, label: "TV a Cabo" },
         { icon: Wifi, label: "Wi-Fi de Alta Velocidade" },
-        { icon: Coffee, label: "Frigobar" },
         { icon: Sparkles, label: "Decoração Sofisticada" }
       ],
       whatsappMessage: "Olá! Gostaria de saber mais sobre o Quarto Vista das Três Palmeiras e fazer uma reserva."
